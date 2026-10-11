@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Minto",
+    "slug": "mini-project3-expense-tracker",
+    "scheme": "minto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Minto cần truy cập ảnh để đọc hóa đơn bạn chọn.",
+          "cameraPermission": "Minto cần camera để chụp hóa đơn.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-mlkit-ocr",
+        {
+          "iosEngine": "mlkit"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "16.4",
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "package": "com.trongnd.minto"
+    },
+    "ios": {
+      "bundleIdentifier": "com.trongnd.minto",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Minto dùng camera để chụp hóa đơn và gợi ý thông tin giao dịch.",
+        "NSPhotoLibraryUsageDescription": "Minto truy cập ảnh được chọn để đọc hóa đơn trên thiết bị."
+      }
+    }
+  }
+}
+
